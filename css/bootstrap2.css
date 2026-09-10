@@ -1,0 +1,463 @@
+/* ==========================================================
+   OmniEsports — tema visual
+   Paleta: arena escura + dourado (troféu/prêmio) + magenta (ao vivo)
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root,
+[data-bs-theme="dark"] {
+  --oe-bg: #0f1420;
+  --oe-bg-panel: #161b2c;
+  --oe-bg-panel-alt: #1d2338;
+  --oe-border: #2a3150;
+  --oe-text: #e8eaf0;
+  --oe-text-muted: #8a93ad;
+  --oe-gold: #f2b705;
+  --oe-gold-dim: #b98c06;
+  --oe-magenta: #ff3d81;
+
+  /* Sobrescreve variáveis do Bootstrap para casar com a paleta */
+  --bs-body-bg: var(--oe-bg);
+  --bs-body-color: var(--oe-text);
+  --bs-border-color: var(--oe-border);
+  --bs-primary: var(--oe-gold);
+  --bs-primary-rgb: 242, 183, 5;
+  --bs-info: var(--oe-magenta);
+  --bs-info-rgb: 255, 61, 129;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--oe-bg);
+  background-image:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(242, 183, 5, 0.08), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 0%, rgba(255, 61, 129, 0.07), transparent 55%);
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.card-title {
+  font-family: 'Rajdhani', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* ---------- Navbar ---------- */
+.navbar.bg-dark {
+  background-color: var(--oe-bg-panel) !important;
+  border-bottom: 1px solid var(--oe-border) !important;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: var(--oe-gold) !important;
+  letter-spacing: 0.03em;
+}
+
+.navbar-nav .nav-link {
+  color: var(--oe-text-muted);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--oe-text);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--oe-gold) !important;
+}
+
+.dropdown-menu-dark {
+  --bs-dropdown-bg: var(--oe-bg-panel-alt);
+  --bs-dropdown-border-color: var(--oe-border);
+  --bs-dropdown-link-hover-bg: rgba(242, 183, 5, 0.12);
+  --bs-dropdown-link-hover-color: var(--oe-gold);
+  --bs-dropdown-link-color: var(--oe-text-muted);
+}
+
+/* Badge "AO VIVO" na navbar */
+.nav-link .live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--oe-magenta);
+  margin-right: 6px;
+  box-shadow: 0 0 0 0 rgba(255, 61, 129, 0.6);
+  animation: live-pulse 1.8s infinite;
+}
+
+@keyframes live-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 61, 129, 0.55); }
+  70%  { box-shadow: 0 0 0 7px rgba(255, 61, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 61, 129, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-link .live-dot { animation: none; }
+}
+
+.navbar .form-control {
+  background-color: var(--oe-bg);
+  border-color: var(--oe-border);
+  color: var(--oe-text);
+}
+
+.navbar .form-control::placeholder {
+  color: var(--oe-text-muted);
+}
+
+.navbar .btn-outline-info {
+  --bs-btn-color: var(--oe-magenta);
+  --bs-btn-border-color: var(--oe-magenta);
+  --bs-btn-hover-bg: var(--oe-magenta);
+  --bs-btn-hover-border-color: var(--oe-magenta);
+}
+
+/* ---------- Botões ---------- */
+.btn-primary {
+  --bs-btn-bg: var(--oe-gold);
+  --bs-btn-border-color: var(--oe-gold);
+  --bs-btn-hover-bg: var(--oe-gold-dim);
+  --bs-btn-hover-border-color: var(--oe-gold-dim);
+  --bs-btn-color: #14100a;
+  --bs-btn-hover-color: #14100a;
+  font-weight: 600;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background-color: var(--oe-bg-panel);
+  border: 1px solid var(--oe-border);
+}
+
+.card-img-top {
+  height: 190px;
+  object-fit: cover;
+}
+
+.card-text {
+  color: var(--oe-text-muted);
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  border-color: var(--oe-gold-dim);
+  cursor: pointer;
+}
+
+/* ---------- Seções internas (lançamentos / campeonatos) ---------- */
+.oe-section-title {
+  border-left: 4px solid var(--oe-gold);
+  padding-left: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.oe-eyebrow {
+  color: var(--oe-magenta);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.table-oe {
+  --bs-table-bg: var(--oe-bg-panel);
+  --bs-table-color: var(--oe-text);
+  --bs-table-border-color: var(--oe-border);
+}
+
+.badge-jogo {
+  background-color: var(--oe-bg-panel-alt);
+  color: var(--oe-gold);
+  border: 1px solid var(--oe-border);
+  font-weight: 500;
+}
+
+/* ---------- Footer ---------- */
+.oe-footer {
+  background-color: var(--oe-bg-panel);
+  border-top: 1px solid var(--oe-border);
+  color: var(--oe-text-muted);
+  margin-top: 4rem;
+}
+
+.oe-footer a {
+  color: var(--oe-text-muted);
+  text-decoration: none;
+}
+
+.oe-footer a:hover {
+  color: var(--oe-gold);
+}
+
+.oe-footer h6 {
+  color: var(--oe-text);
+  font-family: 'Rajdhani', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+/* Foco visível para acessibilidade via teclado */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--oe-gold);
+  outline-offset: 2px;
+}
+
+/* ==========================================================
+   Temas por jogo
+   Cada página de jogo define data-game no <body> e ganha
+   uma cor de destaque própria, sem perder a identidade
+   geral do site (fundo, tipografia, header).
+   ========================================================== */
+
+[data-game] {
+  --oe-accent: var(--oe-gold);
+  --oe-accent-dim: var(--oe-gold-dim);
+  --oe-accent-rgb: 242, 183, 5;
+}
+
+[data-game="valorant"] {
+  --oe-accent: #ff4655;
+  --oe-accent-dim: #c7313e;
+  --oe-accent-rgb: 255, 70, 85;
+}
+
+[data-game="lol"] {
+  --oe-accent: #0ac8b9;
+  --oe-accent-dim: #0a9c90;
+  --oe-accent-rgb: 10, 200, 185;
+}
+
+[data-game="freefire"] {
+  --oe-accent: #ff7a1a;
+  --oe-accent-dim: #cc5f10;
+  --oe-accent-rgb: 255, 122, 26;
+}
+
+[data-game="tekken"] {
+  --oe-accent: #9d6bff;
+  --oe-accent-dim: #7548d6;
+  --oe-accent-rgb: 157, 107, 255;
+}
+
+[data-game="cs2"] {
+  --oe-accent: #f2a93c;
+  --oe-accent-dim: #c9840f;
+  --oe-accent-rgb: 242, 169, 60;
+}
+
+[data-game="dota2"] {
+  --oe-accent: #d64545;
+  --oe-accent-dim: #a83232;
+  --oe-accent-rgb: 214, 69, 69;
+}
+
+[data-game="fortnite"] {
+  --oe-accent: #6c5ce7;
+  --oe-accent-dim: #4d3fb0;
+  --oe-accent-rgb: 108, 92, 231;
+}
+
+[data-game="sf6"] {
+  --oe-accent: #29b6f6;
+  --oe-accent-dim: #1c8ac4;
+  --oe-accent-rgb: 41, 182, 246;
+}
+
+[data-game="rocketleague"] {
+  --oe-accent: #2ecc71;
+  --oe-accent-dim: #24a35a;
+  --oe-accent-rgb: 46, 204, 113;
+}
+
+[data-game] .oe-section-title,
+[data-game] .oe-game-hero {
+  border-color: var(--oe-accent);
+}
+
+[data-game] .btn-primary {
+  --bs-btn-bg: var(--oe-accent);
+  --bs-btn-border-color: var(--oe-accent);
+  --bs-btn-hover-bg: var(--oe-accent-dim);
+  --bs-btn-hover-border-color: var(--oe-accent-dim);
+  --bs-btn-color: #0b0d14;
+  --bs-btn-hover-color: #0b0d14;
+}
+
+[data-game] .navbar-nav .nav-link.active,
+[data-game] .oe-eyebrow-game {
+  color: var(--oe-accent) !important;
+}
+
+[data-game] a:focus-visible,
+[data-game] button:focus-visible {
+  outline-color: var(--oe-accent);
+}
+
+/* ---------- Cabeçalho de página de jogo ---------- */
+.oe-game-hero {
+  border-left: 4px solid var(--oe-accent);
+  background: linear-gradient(90deg, rgba(var(--oe-accent-rgb), 0.10), transparent 60%);
+  padding: 2rem 1.75rem;
+  border-radius: 0;
+  margin-bottom: 2rem;
+}
+
+.oe-game-hero .oe-game-tag {
+  display: inline-block;
+  color: var(--oe-accent);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.oe-game-hero h1 {
+  margin: 0.35rem 0 0.5rem;
+}
+
+/* ---------- Status de partida (semântico, não decorativo) ---------- */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-agendado { color: var(--oe-text-muted); }
+.status-agendado .status-dot { background: var(--oe-text-muted); }
+
+.status-ao-vivo { color: var(--oe-magenta); }
+.status-ao-vivo .status-dot {
+  background: var(--oe-magenta);
+  box-shadow: 0 0 0 0 rgba(255, 61, 129, 0.6);
+  animation: live-pulse 1.8s infinite;
+}
+
+.status-finalizado { color: #3ecf8e; }
+.status-finalizado .status-dot { background: #3ecf8e; }
+
+/* ---------- Card de partida (próxima ou concluída) ---------- */
+.match-card {
+  background-color: var(--oe-bg-panel);
+  border: 1px solid var(--oe-border);
+  padding: 1rem 1.25rem;
+}
+
+.match-card .match-teams {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.match-card .match-score {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--oe-text);
+}
+
+.match-card .match-meta {
+  color: var(--oe-text-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- Card de jogo (usado no hub de campeonatos) ---------- */
+.game-pill {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.card-game-link {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+/* ---------- Notícias: recorte de texto consistente ---------- */
+.card-text-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- Hero da home (estrutura via row/col do Bootstrap) ---------- */
+.oe-hero-kicker {
+  color: var(--oe-magenta);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.oe-hero-img {
+  min-height: 220px;
+  object-fit: cover;
+}
+
+@media (min-width: 992px) {
+  .oe-hero-img {
+    min-height: 100%;
+  }
+}
+
+/* ---------- Logo ---------- */
+.navbar-brand img {
+  display: inline-block;
+}
+/* ==========================================================
+   Notícias
+   ========================================================== */
+
+.news-card {
+  background-color: var(--oe-bg-panel);
+  border: 1px solid var(--oe-border);
+  overflow: hidden;
+}
+
+.news-thumb {
+  width: 100%;
+  height: 160px;
+  display: block;
+  object-fit: cover;
+}
+
+.news-card .badge-jogo {
+  color: var(--news-accent, var(--oe-gold));
+}
+
+/* Filtro de notícias (pills do Bootstrap, sem framework extra) */
+.oe-filter-pills .nav-link {
+  color: var(--oe-text-muted);
+  border: 1px solid var(--oe-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  margin: 0 0.35rem 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.oe-filter-pills .nav-link:hover {
+  color: var(--oe-text);
+  border-color: var(--oe-gold-dim);
+}
+
+.oe-filter-pills .nav-link.active {
+  background-color: var(--oe-gold);
+  border-color: var(--oe-gold);
+  color: #14100a !important;
+}

@@ -1,0 +1,249 @@
+/* ==========================================================
+   OmniEsports — Página 3: Conhecendo o Bootstrap
+   Extensão do tema oe (arena escura + dourado + magenta)
+   específica para esta página de documentação do projeto.
+   Depende de oe-theme.css já carregado antes deste arquivo.
+   ========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ---------- Hero da página de docs ---------- */
+.oe-doc-hero {
+  position: relative;
+  padding: 3rem 0 2.5rem;
+  overflow: hidden;
+}
+
+.oe-doc-hero .oe-hero-kicker {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.oe-doc-hero h1 {
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  line-height: 1.05;
+}
+
+.oe-doc-hero h1 .accent {
+  color: var(--oe-gold);
+}
+
+.oe-doc-hero p {
+  color: var(--oe-text-muted);
+  max-width: 56ch;
+  font-size: 1.05rem;
+}
+
+/* grid decorativa de fundo, ecoando o tema "12 colunas" */
+.oe-doc-hero .oe-hero-gridlines {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 6px;
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.oe-doc-hero .oe-hero-gridlines span {
+  background: linear-gradient(180deg, rgba(242, 183, 5, 0.08), transparent 70%);
+  border-radius: 2px;
+}
+
+.oe-doc-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 560px) {
+  .oe-doc-hero h1 { font-size: 2.1rem; }
+}
+
+/* ---------- Sumário lateral (docs nav) ---------- */
+.oe-doc-nav {
+  position: sticky;
+  top: 88px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-left: 2px solid var(--oe-border);
+  padding-left: 16px;
+}
+
+.oe-doc-nav .oe-doc-nav-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--oe-text-muted);
+  margin-bottom: 4px;
+  letter-spacing: 0.03em;
+}
+
+.oe-doc-nav a {
+  font-size: 0.9rem;
+  color: var(--oe-text-muted);
+  text-decoration: none;
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.oe-doc-nav a:hover,
+.oe-doc-nav a.active {
+  color: var(--oe-gold);
+  border-color: var(--oe-gold);
+}
+
+@media (max-width: 991px) {
+  .oe-doc-nav {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-left: none;
+    border-bottom: 2px solid var(--oe-border);
+    padding: 0 0 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* ---------- Blocos de conteúdo ---------- */
+.oe-doc-section {
+  padding: 3rem 0;
+  border-top: 1px solid var(--oe-border);
+}
+
+.oe-doc-section:first-of-type {
+  border-top: none;
+}
+
+.oe-doc-section p {
+  color: var(--oe-text-muted);
+}
+
+.oe-doc-section p strong {
+  color: var(--oe-text);
+}
+
+.oe-doc-caption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--oe-text-muted);
+  margin: 1.75rem 0 0.75rem;
+}
+
+/* ---------- Bloco de código ---------- */
+.oe-code-block {
+  background: #0a0d16;
+  border: 1px solid var(--oe-border);
+  border-radius: 6px;
+  padding: 1.1rem 1.25rem;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+
+.oe-code-block pre {
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  color: #d7dcec;
+}
+
+.oe-code-block .tk-tag   { color: var(--oe-magenta); }
+.oe-code-block .tk-attr  { color: var(--oe-gold); }
+.oe-code-block .tk-str   { color: #3ecf8e; }
+
+/* ---------- Demonstração de grid ao vivo ---------- */
+.oe-grid-demo .oe-grid-box {
+  background: var(--oe-bg-panel-alt);
+  border: 1px solid var(--oe-border);
+  border-left: 3px solid var(--oe-gold);
+  border-radius: 4px;
+  padding: 1.1rem 1rem;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--oe-text-muted);
+}
+
+.oe-grid-demo .oe-grid-box strong {
+  display: block;
+  color: var(--oe-text);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+/* ---------- Glossário (container / row / col...) ---------- */
+.oe-glossary-card {
+  background-color: var(--oe-bg-panel);
+  border: 1px solid var(--oe-border);
+  border-radius: 4px;
+  padding: 1.1rem;
+  height: 100%;
+}
+
+.oe-glossary-card .badge-jogo {
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 0.6rem;
+}
+
+.oe-glossary-card p {
+  margin: 0;
+  font-size: 0.88rem;
+}
+
+/* ---------- Cards de dispositivo (responsividade) ---------- */
+.oe-device-card {
+  background-color: var(--oe-bg-panel);
+  border: 1px solid var(--oe-border);
+  border-radius: 4px;
+  padding: 1.1rem;
+  height: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.oe-device-card:hover {
+  border-color: var(--oe-gold-dim);
+}
+
+.oe-device-card .oe-device-icon {
+  font-size: 1.4rem;
+}
+
+.oe-device-card .oe-device-name {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0.4rem 0 0.5rem;
+}
+
+.oe-device-card .oe-device-range {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--oe-text-muted);
+  margin-top: 0.4rem;
+}
+
+/* ---------- Cards de componentes Bootstrap usados no projeto ---------- */
+.oe-component-card .card-body {
+  padding: 1.25rem;
+}
+
+.oe-component-card .oe-component-index {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--oe-magenta);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Nota final ---------- */
+.oe-doc-note {
+  font-size: 0.85rem;
+  color: var(--oe-text-muted);
+  border-left: 3px solid var(--oe-magenta);
+  padding: 0.6rem 0 0.6rem 0.9rem;
+  margin-top: 2rem;
+}

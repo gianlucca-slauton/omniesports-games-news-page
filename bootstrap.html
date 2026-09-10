@@ -3,10 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Conhecendo o Bootstrap — OmniEsports</title>
+    <title>Conhecendo o Bootstrap | OmniEsports</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="icon" href="./img/logo.svg" type="image/svg+xml">
+    <!-- tema global do site -->
     <link rel="stylesheet" href="./css/style.css">
+    <!-- estilos específicos desta página de documentação -->
+    <link rel="stylesheet" href="./css/bootstrap-page.css">
+    <link rel="stylesheet" href="./css/bootstrap1.css">
+    <link rel="stylesheet" href="./css/bootstrap2.css">
+
   </head>
   <body>
 
@@ -70,143 +76,227 @@
   </div>
 </nav>
 
-<div class="container my-5">
-  <h2 class="oe-section-title">Conhecendo o Bootstrap</h2>
-  <p class="text-body-secondary" style="max-width: 700px;">Esta página explica a ferramenta usada para construir o OmniEsports: o que é, para que serve, como funciona o sistema de grid, o conceito de responsividade e quais componentes do framework foram aplicados no projeto.</p>
+<div class="container-fluid">
+  <div class="row">
 
-  <!-- O que é / Para que serve -->
-  <section class="mt-5 pt-2">
-    <h4 class="oe-section-title">O que é o Bootstrap?</h4>
-    <div class="row g-4 align-items-start">
-      <div class="col-12 col-lg-6">
-        <p>O Bootstrap é um framework front-end de código aberto, criado originalmente pela equipe do Twitter, que reúne um conjunto de arquivos CSS e JavaScript prontos para construir interfaces web. Em vez de escrever do zero cada botão, menu ou grade de colunas, o desenvolvedor usa classes já definidas pelo framework para montar a página.</p>
-        <p class="mb-0">Neste projeto ele foi incluído via CDN, direto no <code>&lt;head&gt;</code> de cada página, sem precisar baixar nenhum arquivo:</p>
-      </div>
-      <div class="col-12 col-lg-6">
-        <pre class="p-3 rounded" style="background: var(--oe-bg-panel); border: 1px solid var(--oe-border); overflow-x:auto;"><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
-...
-&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
-      </div>
+    <!-- ===== NAV LATERAL (sumário) ===== -->
+    <div class="col-lg-3 col-xl-2">
+      <nav class="oe-doc-nav" aria-label="Sumário">
+        <div class="oe-doc-nav-label">Sumário</div>
+        <a href="#o-que-e">O que é</a>
+        <a href="#para-que-serve">Para que serve</a>
+        <a href="#grid">Sistema de Grid</a>
+        <a href="#responsividade">Responsividade</a>
+        <a href="#componentes">Componentes</a>
+      </nav>
     </div>
-  </section>
 
-  <!-- Para que serve -->
-  <section class="mt-5 pt-2">
-    <h4 class="oe-section-title">Para que serve?</h4>
-    <p style="max-width: 780px;">O Bootstrap resolve problemas que apareceriam em qualquer site feito só com CSS próprio: manter um alinhamento consistente entre páginas, adaptar o layout a telas diferentes e evitar reescrever componentes de interface (menus, cartões, botões, tabelas) toda vez que são usados. No OmniEsports, ele garante que a Navbar, os Cards de jogos/notícias e as tabelas de classificação tenham sempre o mesmo comportamento e a mesma base visual em todas as 14 páginas, mudando apenas a cor de destaque de cada jogo.</p>
-  </section>
+    <!-- ===== CONTEÚDO ===== -->
+    <div class="col-lg-9 col-xl-10">
 
-  <!-- Sistema de grid -->
-  <section class="mt-5 pt-2">
-    <h4 class="oe-section-title">Sistema de Grid</h4>
-    <p style="max-width: 780px;">O grid do Bootstrap organiza o conteúdo em até 12 colunas dentro de uma estrutura de três níveis:</p>
-    <ul style="max-width: 780px;">
-      <li><code>.container</code> — cria a área central da página, com margens e largura máxima responsiva.</li>
-      <li><code>.row</code> — uma linha que agrupa colunas.</li>
-      <li><code>.col</code>, <code>.col-md-*</code>, <code>.col-lg-*</code> — colunas dentro da linha; o número após o breakpoint indica quantas das 12 colunas o elemento deve ocupar naquele tamanho de tela.</li>
-    </ul>
+      <!-- HERO -->
+      <header class="oe-doc-hero">
+        <div class="oe-hero-gridlines" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="container">
+          <p class="oe-hero-kicker">Documentação</p>
+          <h1>Conhecendo o<br><span class="accent">Bootstrap</span></h1>
+          <p>Um framework de 12 colunas que organiza o caos de construir layouts que funcionam em qualquer tela.</p>
+        </div>
+      </header>
 
-    <p class="mb-2" style="max-width: 780px;">Exemplo real usado nos cards de notícias deste site (arquivo <code>noticias.html</code>):</p>
-    <pre class="p-3 rounded mb-4" style="background: var(--oe-bg-panel); border: 1px solid var(--oe-border); overflow-x:auto; max-width: 780px;"><code>&lt;div class="container"&gt;
-  &lt;div class="row g-4"&gt;
-    &lt;div class="col-12 col-sm-6 col-lg-3"&gt;...&lt;/div&gt;
-    &lt;div class="col-12 col-sm-6 col-lg-3"&gt;...&lt;/div&gt;
+      <div class="container">
+
+        <!-- O QUE É -->
+        <section id="o-que-e" class="oe-doc-section">
+          <h2 class="oe-section-title">O que é Bootstrap?</h2>
+          <p>O Bootstrap é um <strong>framework front-end gratuito e de código aberto</strong>, criado originalmente pela equipe do Twitter, utilizado no desenvolvimento de sites e aplicações web. Ele reúne um conjunto de arquivos <strong>HTML, CSS e JavaScript</strong> já prontos — com classes e componentes reutilizáveis, como botões, menus, formulários e cards — que agilizam a criação de interfaces organizadas e funcionais, sem que seja preciso escrever todo o código de estilo do zero.</p>
+        </section>
+
+        <!-- PARA QUE SERVE -->
+        <section id="para-que-serve" class="oe-doc-section">
+          <h2 class="oe-section-title">Para que serve?</h2>
+          <p>O Bootstrap ajuda a resolver problemas comuns do dia a dia do desenvolvimento web:</p>
+          <ul>
+            <li><strong>Agilidade:</strong> evita reescrever estilos básicos repetidamente, poupando tempo de desenvolvimento.</li>
+            <li><strong>Padronização visual:</strong> garante uma aparência consistente em todas as páginas do site.</li>
+            <li><strong>Responsividade:</strong> facilita páginas que se adaptam a diferentes tamanhos de tela.</li>
+            <li><strong>Compatibilidade entre navegadores:</strong> reduz diferenças de exibição entre Chrome, Firefox, Edge etc.</li>
+            <li><strong>Facilidade de manutenção:</strong> segue um padrão conhecido, fácil de entender e alterar.</li>
+          </ul>
+        </section>
+
+        <!-- SISTEMA DE GRID -->
+        <section id="grid" class="oe-doc-section">
+          <h2 class="oe-section-title">Sistema de Grid</h2>
+          <p>O sistema de <strong>Grid</strong> do Bootstrap é uma malha baseada em <strong>12 colunas</strong>, que organiza o conteúdo da página de forma flexível. Ele funciona em três níveis: o <code>container</code>, que envolve e centraliza o conteúdo; a <code>row</code>, que forma uma linha; e a <code>col</code>, que divide essa linha em colunas.</p>
+
+          <div class="oe-code-block">
+<pre><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Coluna 1&lt;/div&gt;
+    &lt;div class="col-md-6 col-lg-4"&gt;Coluna 2&lt;/div&gt;
+    &lt;div class="col-md-12 col-lg-4"&gt;Coluna 3&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+          </div>
 
-    <p class="mb-3">Veja o grid funcionando ao vivo — redimensione a janela do navegador para ver as colunas se reorganizarem:</p>
-    <div class="row g-3">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100"><div class="card-body text-center"><span class="badge badge-jogo mb-2">col-12 col-md-6 col-lg-4</span><p class="card-text mb-0 small">1 coluna no celular, 2 no tablet, 3 no notebook</p></div></div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100"><div class="card-body text-center"><span class="badge badge-jogo mb-2">col-12 col-md-6 col-lg-4</span><p class="card-text mb-0 small">1 coluna no celular, 2 no tablet, 3 no notebook</p></div></div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100"><div class="card-body text-center"><span class="badge badge-jogo mb-2">col-12 col-md-6 col-lg-4</span><p class="card-text mb-0 small">1 coluna no celular, 2 no tablet, 3 no notebook</p></div></div>
+          <p class="oe-doc-caption">Exemplo ao vivo — redimensione a janela para ver as colunas se reorganizarem:</p>
+          <div class="oe-grid-demo">
+            <div class="row g-2">
+              <div class="col-md-6 col-lg-4"><div class="oe-grid-box">Coluna 1</div></div>
+              <div class="col-md-6 col-lg-4"><div class="oe-grid-box">Coluna 2</div></div>
+              <div class="col-md-12 col-lg-4"><div class="oe-grid-box">Coluna 3</div></div>
+            </div>
+          </div>
+
+          <p class="oe-doc-caption">Glossário:</p>
+          <div class="row g-3">
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="oe-glossary-card">
+                <span class="badge-jogo">container</span>
+                <p>Envolve toda a estrutura e centraliza o conteúdo na página.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="oe-glossary-card">
+                <span class="badge-jogo">row</span>
+                <p>Cria a linha onde as colunas serão distribuídas.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="oe-glossary-card">
+                <span class="badge-jogo">col</span>
+                <p>Define uma coluna de largura automática, dividindo o espaço igualmente.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="oe-glossary-card">
+                <span class="badge-jogo">col-md</span>
+                <p>Comportamento em telas médias (tablets) — ex.: <code>col-md-6</code> ocupa metade da linha.</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <div class="oe-glossary-card">
+                <span class="badge-jogo">col-lg</span>
+                <p>Comportamento em telas grandes (notebooks/monitores) — ex.: <code>col-lg-4</code> ocupa um terço da linha.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RESPONSIVIDADE -->
+        <section id="responsividade" class="oe-doc-section">
+          <h2 class="oe-section-title">Responsividade</h2>
+          <p><strong>Design responsivo</strong> é a prática de criar páginas que se ajustam automaticamente ao tamanho da tela do dispositivo, garantindo boa experiência de visualização em qualquer aparelho. O Bootstrap facilita isso combinando o grid com <strong>breakpoints</strong> — classes específicas para cada faixa de tamanho de tela.</p>
+
+          <div class="row g-3">
+            <div class="col-6 col-md-3">
+              <div class="oe-device-card text-center">
+                <span class="oe-device-icon">📱</span>
+                <span class="oe-device-name">Celulares</span>
+                <code>col-</code>
+                <span class="oe-device-range">&lt; 576px</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="oe-device-card text-center">
+                <span class="oe-device-icon">📱</span>
+                <span class="oe-device-name">Tablets</span>
+                <code>col-md-</code>
+                <span class="oe-device-range">≥ 768px</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="oe-device-card text-center">
+                <span class="oe-device-icon">💻</span>
+                <span class="oe-device-name">Notebooks</span>
+                <code>col-lg-</code>
+                <span class="oe-device-range">≥ 992px</span>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="oe-device-card text-center">
+                <span class="oe-device-icon">🖥️</span>
+                <span class="oe-device-name">Monitores maiores</span>
+                <code>col-xl- / col-xxl-</code>
+                <span class="oe-device-range">≥ 1200px / 1400px</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="oe-doc-caption">Assim, um mesmo bloco pode ocupar 100% da tela em um celular e apenas um terço em um monitor grande — sem precisar criar páginas diferentes para cada dispositivo:</p>
+          <div class="oe-code-block">
+<pre><code>&lt;div class="col-12 col-md-6 col-lg-4"&gt;
+  Ocupa 100% em celulares, 50% em tablets e 33% em notebooks/monitores.
+&lt;/div&gt;</code></pre>
+          </div>
+        </section>
+
+        <!-- COMPONENTES -->
+        <section id="componentes" class="oe-doc-section">
+          <h2 class="oe-section-title">Componentes utilizados no projeto</h2>
+          <p>Pelo menos 5 componentes do Bootstrap foram utilizados no desenvolvimento do site:</p>
+
+          <div class="row g-3">
+            <div class="col-6 col-md-4">
+              <div class="card oe-component-card h-100">
+                <div class="card-body">
+                  <h3 class="card-title h5">Navbar</h3>
+                  <p class="card-text">Barra de navegação fixa usada para exibir o menu principal do site, com links para as seções/páginas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card oe-component-card h-100">
+                <div class="card-body">
+                  <h3 class="card-title h5">Card</h3>
+                  <p class="card-text">Utilizado para organizar informações em blocos visuais, como imagens, textos e botões agrupados.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card oe-component-card h-100">
+                <div class="card-body">
+                  <h3 class="card-title h5">Button</h3>
+                  <p class="card-text">Botões estilizados usados para ações como enviar formulários ou navegar entre páginas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card oe-component-card h-100">
+                <div class="card-body">
+                  <h3 class="card-title h5">Carousel</h3>
+                  <p class="card-text">Exibe uma sequência de imagens ou conteúdos em um slide rotativo, ideal para banners e destaques.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card oe-component-card h-100">
+                <div class="card-body">
+                  <h3 class="card-title h5">Form</h3>
+                  <p class="card-text">Captura dados do usuário, como nome, e-mail e mensagem, com estilização pronta para os campos.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-4">
+              <div class="card oe-component-card h-100">
+                <div class="card-body">
+                  <h3 class="card-title h5">Footer (Grid Layout)</h3>
+                  <p class="card-text">Estrutura baseada no sistema de grid usada para organizar o rodapé, distribuindo contato e redes sociais.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        
+        </section>
+
       </div>
     </div>
-  </section>
-
-  <!-- Responsividade -->
-  <section class="mt-5 pt-2">
-    <h4 class="oe-section-title">Responsividade</h4>
-    <p style="max-width: 780px;">Design responsivo é a prática de construir uma página que se adapta ao tamanho da tela de quem está acessando, seja um celular, um tablet, um notebook ou um monitor grande, sem quebrar o layout nem exigir zoom ou rolagem lateral.</p>
-    <p style="max-width: 780px;">O Bootstrap facilita isso através dos <strong>breakpoints</strong>: pontos de quebra que definem a largura mínima da tela a partir da qual uma regra passa a valer.</p>
-    <div class="table-responsive" style="max-width: 780px;">
-      <table class="table table-oe align-middle">
-        <thead>
-          <tr><th scope="col">Prefixo</th><th scope="col">Largura mínima</th><th scope="col">Dispositivo típico</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><code>(nenhum)</code></td><td>0px</td><td>📱 Celulares</td></tr>
-          <tr><td><code>sm</code></td><td>576px</td><td>📱 Celulares grandes</td></tr>
-          <tr><td><code>md</code></td><td>768px</td><td>📱 Tablets</td></tr>
-          <tr><td><code>lg</code></td><td>992px</td><td>💻 Notebooks</td></tr>
-          <tr><td><code>xl</code></td><td>1200px</td><td>🖥️ Monitores maiores</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="mb-0" style="max-width: 780px;">É por isso que a Navbar do OmniEsports vira um menu recolhível (<code>navbar-expand-lg</code>) abaixo de 992px, e por isso os cards de jogos e notícias usam classes como <code>col-12 col-sm-6 col-lg-3</code>: uma coluna cheia no celular, duas no tablet e quatro a partir do notebook.</p>
-  </section>
-
-  <!-- Componentes -->
-  <section class="mt-5 pt-2">
-    <h4 class="oe-section-title">Componentes utilizados no projeto</h4>
-    <p class="mb-4" style="max-width: 780px;">Estes são os principais componentes do Bootstrap aplicados nas páginas do OmniEsports:</p>
-
-    <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 card-hover">
-          <div class="card-body">
-            <h5 class="card-title">Navbar</h5>
-            <p class="card-text">Menu de navegação fixo no topo, presente em todas as páginas, com dropdown de campeonatos e versão recolhível para telas pequenas.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 card-hover">
-          <div class="card-body">
-            <h5 class="card-title">Card</h5>
-            <p class="card-text">Utilizado para organizar informações em blocos visuais: jogos, notícias, partidas e lançamentos, sempre com a mesma estrutura de imagem, título e texto.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 card-hover">
-          <div class="card-body">
-            <h5 class="card-title">Dropdown</h5>
-            <p class="card-text">Usado no item "Campeonatos" da Navbar para agrupar os 9 jogos por categoria (FPS, MOBA, Battle Royale, Fighting, Esportes/Corrida).</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 card-hover">
-          <div class="card-body">
-            <h5 class="card-title">Badge</h5>
-            <p class="card-text">Pequenas etiquetas coloridas que identificam o jogo ou o status de uma notícia/lançamento, como "Pré-venda" ou "Beta aberto".</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 card-hover">
-          <div class="card-body">
-            <h5 class="card-title">Table</h5>
-            <p class="card-text">Exibe a classificação de cada campeonato (vitórias e derrotas dos times) de forma organizada e com rolagem horizontal em telas pequenas.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 card-hover">
-          <div class="card-body">
-            <h5 class="card-title">Botões (Button)</h5>
-            <p class="card-text">Classes como <code>btn btn-primary</code> e <code>btn btn-outline-light</code> usadas para as chamadas de ação, como "Ver campeonatos" e "Buscar".</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  </div>
 </div>
 
 <footer class="oe-footer py-5 mt-5">

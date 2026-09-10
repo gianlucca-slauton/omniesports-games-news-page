@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notícias — OmniEsports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" href="./img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="./img/logo.svg" alt="" width="30" height="30">
+      OmniEsports
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="noticias.html">Notícias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lancamentos.html">Lançamentos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="campeonatos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Campeonatos
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><h6 class="dropdown-header">FPS</h6></li>
+            <li><a class="dropdown-item" href="valorant.html">Valorant</a></li>
+            <li><a class="dropdown-item" href="cs2.html">Counter-Strike 2</a></li>
+            <li><h6 class="dropdown-header">MOBA</h6></li>
+            <li><a class="dropdown-item" href="lol.html">League of Legends</a></li>
+            <li><a class="dropdown-item" href="dota2.html">Dota 2</a></li>
+            <li><h6 class="dropdown-header">Battle Royale</h6></li>
+            <li><a class="dropdown-item" href="freefire.html">Free Fire</a></li>
+            <li><a class="dropdown-item" href="fortnite.html">Fortnite</a></li>
+            <li><h6 class="dropdown-header">Fighting</h6></li>
+            <li><a class="dropdown-item" href="tekken.html">Tekken 8</a></li>
+            <li><a class="dropdown-item" href="sf6.html">Street Fighter 6</a></li>
+            <li><h6 class="dropdown-header">Esportes/Corrida</h6></li>
+            <li><a class="dropdown-item" href="rocketleague.html">Rocket League</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="campeonatos.html#calendario">Calendário completo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="campeonatos.html#ao-vivo"><span class="live-dot"></span>Ao vivo</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar jogo..." aria-label="Search"/>
+        <button class="btn btn-outline-info" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <h2 class="oe-section-title">Notícias</h2>
+  <p class="text-body-secondary" style="max-width: 640px;">Tudo o que está acontecendo no mundo competitivo, jogo por jogo. Filtre por título para ver só o que interessa.</p>
+
+  <ul class="nav oe-filter-pills flex-wrap mt-4 mb-2" id="newsFilter">
+          <li class="nav-item"><a class="nav-link active" href="#" data-filter="all">Todos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="valorant">Valorant</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="cs2">Counter-Strike 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="lol">League of Legends</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="dota2">Dota 2</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="freefire">Free Fire</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="fortnite">Fortnite</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="tekken">Tekken 8</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="sf6">Street Fighter 6</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" data-filter="rocketleague">Rocket League</a></li>
+  </ul>
+
+  <div class="row g-4 mt-1" id="newsGrid">
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="valorant">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #ff4655;">
+        <img src="./img/thumb-valorant.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Valorant">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Valorant</span>
+          <h4 class="card-title ">100 Thieves vence a LOUD por 3-2</h4>
+          <p class="card-text card-text-clamp small">100 Thieves fatura o título da Etapa 2 do VCT Americas em São Paulo após uma final de cinco mapas.</p>
+          <span class="text-body-secondary small">09/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="valorant">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #ff4655;">
+        <img src="./img/thumb-valorant.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Valorant">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Valorant</span>
+          <h4 class="card-title ">Valorant ajusta economia de agentes controladores</h4>
+          <p class="card-text card-text-clamp small">Mudança busca equilibrar o meta competitivo antes da próxima etapa do VCT.</p>
+          <span class="text-body-secondary small">05/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="cs2">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #f2a93c;">
+        <img src="./img/thumb-cs2.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Counter-Strike 2">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Counter-Strike 2</span>
+          <h4 class="card-title ">Atualização de mapas chega ao CS2</h4>
+          <p class="card-text card-text-clamp small">Ajustes de iluminação e colisão em três mapas do pool competitivo ativo.</p>
+          <span class="text-body-secondary small">07/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="cs2">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #f2a93c;">
+        <img src="./img/thumb-cs2.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Counter-Strike 2">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Counter-Strike 2</span>
+          <h4 class="card-title ">FURIA confirma line-up para o Major</h4>
+          <p class="card-text card-text-clamp small">Equipe brasileira anuncia elenco definitivo às vésperas da fase de grupos.</p>
+          <span class="text-body-secondary small">03/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="lol">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #0ac8b9;">
+        <img src="./img/thumb-lol.svg" class="news-thumb" alt="Ilustração de destaque para notícias de League of Legends">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">League of Legends</span>
+          <h4 class="card-title ">LoL Worlds: fase de grupos definida</h4>
+          <p class="card-text card-text-clamp small">Sorteio define os quatro grupos do mundial; times brasileiros conhecem seus adversários.</p>
+          <span class="text-body-secondary small">08/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="lol">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #0ac8b9;">
+        <img src="./img/thumb-lol.svg" class="news-thumb" alt="Ilustração de destaque para notícias de League of Legends">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">League of Legends</span>
+          <h4 class="card-title ">CBLOL anuncia formato da próxima split</h4>
+          <p class="card-text card-text-clamp small">Competição muda número de vagas para o campeonato mundial em 2027.</p>
+          <span class="text-body-secondary small">02/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="dota2">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #d64545;">
+        <img src="./img/thumb-dota2.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Dota 2">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Dota 2</span>
+          <h4 class="card-title ">The International define sede da próxima edição</h4>
+          <p class="card-text card-text-clamp small">Valve confirma cidade-sede e aumenta premiação em relação ao ano anterior.</p>
+          <span class="text-body-secondary small">06/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="dota2">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #d64545;">
+        <img src="./img/thumb-dota2.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Dota 2">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Dota 2</span>
+          <h4 class="card-title ">Patch de equilíbrio chega a Dota 2</h4>
+          <p class="card-text card-text-clamp small">Atualização mexe no meta com ajustes em heróis carregadores de item.</p>
+          <span class="text-body-secondary small">01/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="freefire">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #ff7a1a;">
+        <img src="./img/thumb-freefire.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Free Fire">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Free Fire</span>
+          <h4 class="card-title ">Free Fire World Series muda de sede</h4>
+          <p class="card-text card-text-clamp small">Organização anuncia nova cidade-sede para a próxima edição do maior torneio do jogo.</p>
+          <span class="text-body-secondary small">01/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="freefire">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #ff7a1a;">
+        <img src="./img/thumb-freefire.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Free Fire">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Free Fire</span>
+          <h4 class="card-title ">Liga BR de Free Fire abre inscrições</h4>
+          <p class="card-text card-text-clamp small">Times amadores já podem se inscrever para a fase classificatória.</p>
+          <span class="text-body-secondary small">28/08</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="fortnite">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #6c5ce7;">
+        <img src="./img/thumb-fortnite.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Fortnite">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Fortnite</span>
+          <h4 class="card-title ">Fortnite anuncia nova temporada competitiva</h4>
+          <p class="card-text card-text-clamp small">Mudanças no mapa afetam diretamente a estratégia dos times profissionais.</p>
+          <span class="text-body-secondary small">04/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="fortnite">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #6c5ce7;">
+        <img src="./img/thumb-fortnite.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Fortnite">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Fortnite</span>
+          <h4 class="card-title ">Copa Fortnite bate recorde de audiência</h4>
+          <p class="card-text card-text-clamp small">Transmissão da grande final ultrapassa marca histórica de espectadores simultâneos.</p>
+          <span class="text-body-secondary small">30/08</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="tekken">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #9d6bff;">
+        <img src="./img/thumb-tekken.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Tekken 8">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Tekken 8</span>
+          <h4 class="card-title ">Tekken 8 recebe personagem surpresa</h4>
+          <p class="card-text card-text-clamp small">Novo lutador chega via atualização 3.0 e já entra no próximo circuito competitivo.</p>
+          <span class="text-body-secondary small">08/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="tekken">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #9d6bff;">
+        <img src="./img/thumb-tekken.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Tekken 8">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Tekken 8</span>
+          <h4 class="card-title ">Arslan Ash confirma presença no circuito EVO</h4>
+          <p class="card-text card-text-clamp small">Um dos maiores nomes do jogo retorna à competição após período afastado.</p>
+          <span class="text-body-secondary small">31/08</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="sf6">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #29b6f6;">
+        <img src="./img/thumb-sf6.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Street Fighter 6">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Street Fighter 6</span>
+          <h4 class="card-title ">Street Fighter 6 recebe ajuste de balanceamento</h4>
+          <p class="card-text card-text-clamp small">Atualização foca em personagens pouco usados no cenário competitivo.</p>
+          <span class="text-body-secondary small">07/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="sf6">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #29b6f6;">
+        <img src="./img/thumb-sf6.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Street Fighter 6">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Street Fighter 6</span>
+          <h4 class="card-title ">Capcom Cup define participantes</h4>
+          <p class="card-text card-text-clamp small">Lista final de jogadores classificados para a grande final anual é divulgada.</p>
+          <span class="text-body-secondary small">29/08</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="rocketleague">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #2ecc71;">
+        <img src="./img/thumb-rocketleague.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Rocket League">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Rocket League</span>
+          <h4 class="card-title ">Rocket League Championship anuncia novo formato</h4>
+          <p class="card-text card-text-clamp small">Circuito passa a ter mais etapas regionais antes do mundial.</p>
+          <span class="text-body-secondary small">06/09</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-3" data-news-game="rocketleague">
+      <div class="card news-card h-100 card-hover" style="--news-accent: #2ecc71;">
+        <img src="./img/thumb-rocketleague.svg" class="news-thumb" alt="Ilustração de destaque para notícias de Rocket League">
+        <div class="card-body">
+          <span class="badge badge-jogo mb-2">Rocket League</span>
+          <h4 class="card-title ">Equipe brasileira se classifica para o mundial</h4>
+          <p class="card-text card-text-clamp small">Time nacional garante vaga após campanha invicta na fase regional.</p>
+          <span class="text-body-secondary small">27/08</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="oe-footer py-5 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-4">
+        <h6 class="mb-3">OmniEsports</h6>
+        <p class="mb-0">Jogos, notícias e campeonatos de e-sports em um só lugar.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="mb-3">Navegação</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="lancamentos.html">Lançamentos</a></li>
+          <li><a href="campeonatos.html">Campeonatos</a></li>
+          <li><a href="bootstrap.html">Bootstrap</a></li>
+          <li><a href="campeonatos.html#calendario">Calendário</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="mb-3">Redes sociais</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitch</a></li>
+          <li><a href="#">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <p class="mb-0 small">&copy; 2026 OmniEsports. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<script>
+  (function () {
+    const links = document.querySelectorAll('#newsFilter .nav-link');
+    const cards = document.querySelectorAll('#newsGrid [data-news-game]');
+    links.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        links.forEach(function (l) { l.classList.remove('active'); });
+        link.classList.add('active');
+        const filter = link.getAttribute('data-filter');
+        cards.forEach(function (card) {
+          const match = filter === 'all' || card.getAttribute('data-news-game') === filter;
+          card.style.display = match ? '' : 'none';
+        });
+      });
+    });
+  })();
+</script>
+
+  </body>
+</html>

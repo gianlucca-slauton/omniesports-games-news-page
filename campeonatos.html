@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Campeonatos — OmniEsports</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="icon" href="./img/logo.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+
+<nav class="navbar navbar-expand-lg navbar-dark border-bottom border-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+      <img src="./img/logo.svg" alt="" width="30" height="30">
+      OmniEsports
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Início</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="noticias.html">Notícias</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="lancamentos.html">Lançamentos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" aria-current="page" href="campeonatos.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Campeonatos
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><h6 class="dropdown-header">FPS</h6></li>
+            <li><a class="dropdown-item" href="valorant.html">Valorant</a></li>
+            <li><a class="dropdown-item" href="cs2.html">Counter-Strike 2</a></li>
+            <li><h6 class="dropdown-header">MOBA</h6></li>
+            <li><a class="dropdown-item" href="lol.html">League of Legends</a></li>
+            <li><a class="dropdown-item" href="dota2.html">Dota 2</a></li>
+            <li><h6 class="dropdown-header">Battle Royale</h6></li>
+            <li><a class="dropdown-item" href="freefire.html">Free Fire</a></li>
+            <li><a class="dropdown-item" href="fortnite.html">Fortnite</a></li>
+            <li><h6 class="dropdown-header">Fighting</h6></li>
+            <li><a class="dropdown-item" href="tekken.html">Tekken 8</a></li>
+            <li><a class="dropdown-item" href="sf6.html">Street Fighter 6</a></li>
+            <li><h6 class="dropdown-header">Esportes/Corrida</h6></li>
+            <li><a class="dropdown-item" href="rocketleague.html">Rocket League</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="campeonatos.html#calendario">Calendário completo</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="bootstrap.html">Bootstrap</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="campeonatos.html#ao-vivo"><span class="live-dot"></span>Ao vivo</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar jogo..." aria-label="Search"/>
+        <button class="btn btn-outline-info" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <h2 class="oe-section-title">Campeonatos</h2>
+  <p class="text-body-secondary" style="max-width: 640px;">Acompanhe os principais torneios de cada modalidade, resultados recentes e o calendário de partidas. Escolha um jogo abaixo para ver a página completa dele, com cores, times e classificação próprios.</p>
+
+  <section id="ao-vivo" class="mt-5 pt-2">
+    <h4 class="mb-3"><span class="live-dot"></span>Ao vivo agora</h4>
+    <div class="match-card">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+          <span class="badge badge-jogo mb-1">Free Fire</span>
+          <div class="match-teams">Finais — 20 equipes · Free Fire World Series</div>
+          <div class="match-meta status-ao-vivo mt-1"><span class="status-dot"></span>Ao vivo · Rodada final</div>
+        </div>
+        <a href="freefire.html" class="btn btn-primary btn-sm">Ver página do jogo</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 pt-2">
+    <h4 class="oe-section-title">FPS</h4>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="valorant.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">FPS</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#ff4655;"></span>Valorant</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="cs2.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">FPS</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#f2a93c;"></span>Counter-Strike 2</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 pt-2">
+    <h4 class="oe-section-title">MOBA</h4>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="lol.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">MOBA</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#0ac8b9;"></span>League of Legends</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="dota2.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">MOBA</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#d64545;"></span>Dota 2</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 pt-2">
+    <h4 class="oe-section-title">Battle Royale</h4>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="freefire.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">Battle Royale</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#ff7a1a;"></span>Free Fire</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="fortnite.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">Battle Royale</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#6c5ce7;"></span>Fortnite</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 pt-2">
+    <h4 class="oe-section-title">Fighting</h4>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="tekken.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">Fighting</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#9d6bff;"></span>Tekken 8</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="sf6.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">Fighting</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#29b6f6;"></span>Street Fighter 6</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 pt-2">
+    <h4 class="oe-section-title">Esportes/Corrida</h4>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <a href="rocketleague.html" class="card-game-link">
+          <div class="card h-100 card-hover">
+            <div class="card-body">
+              <span class="badge badge-jogo mb-2">Esportes/Corrida</span>
+              <h5 class="card-title"><span class="game-pill" style="background:#2ecc71;"></span>Rocket League</h5>
+              <p class="card-text">Resultados, próximas partidas e classificação.</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-5 pt-2">
+    <h4 class="oe-section-title">Resultados recentes</h4>
+    <div class="row g-3">
+      <div class="col-12 col-md-4">
+        <div class="match-card h-100">
+          <span class="badge badge-jogo mb-2">Valorant</span>
+          <div class="match-teams">100 Thieves 3-2 LOUD</div>
+          <div class="match-meta status-finalizado mt-1"><span class="status-dot"></span>Final · VCT Americas</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="match-card h-100">
+          <span class="badge badge-jogo mb-2">LoL</span>
+          <div class="match-teams">paiN Gaming 2-0 Fluxo</div>
+          <div class="match-meta status-finalizado mt-1"><span class="status-dot"></span>CBLOL · Semana 4</div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="match-card h-100">
+          <span class="badge badge-jogo mb-2">Tekken 8</span>
+          <div class="match-teams">Arslan Ash 3-1 Knee</div>
+          <div class="match-meta status-finalizado mt-1"><span class="status-dot"></span>Final · Circuito EVO</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calendario" class="mt-5 pt-2">
+    <h4 class="oe-section-title">Calendário</h4>
+    <div class="table-responsive">
+      <table class="table table-oe align-middle">
+        <thead>
+          <tr>
+            <th scope="col">Data</th>
+            <th scope="col">Jogo</th>
+            <th scope="col">Campeonato</th>
+            <th scope="col">Confronto</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>12/09</td><td><span class="badge badge-jogo">FPS</span></td><td><a href="valorant.html">VCT Americas</a></td><td>LOUD vs FURIA</td><td class="status-agendado"><span class="status-dot"></span>Agendado</td></tr>
+          <tr><td>13/09</td><td><span class="badge badge-jogo">MOBA</span></td><td><a href="lol.html">CBLOL</a></td><td>paiN Gaming vs RED Canids</td><td class="status-agendado"><span class="status-dot"></span>Agendado</td></tr>
+          <tr><td>14/09</td><td><span class="badge badge-jogo">FPS</span></td><td><a href="cs2.html">Major</a></td><td>FURIA vs MIBR</td><td class="status-agendado"><span class="status-dot"></span>Agendado</td></tr>
+          <tr><td>15/09</td><td><span class="badge badge-jogo">Battle Royale</span></td><td><a href="freefire.html">Free Fire World Series</a></td><td>Finais — 20 equipes</td><td class="status-ao-vivo"><span class="status-dot"></span>Ao vivo</td></tr>
+          <tr><td>16/09</td><td><span class="badge badge-jogo">Battle Royale</span></td><td><a href="fortnite.html">Copa Fortnite</a></td><td>Rodada final</td><td class="status-agendado"><span class="status-dot"></span>Agendado</td></tr>
+          <tr><td>18/09</td><td><span class="badge badge-jogo">Fighting</span></td><td><a href="tekken.html">Circuito EVO</a></td><td>Arslan Ash vs Knee</td><td class="status-agendado"><span class="status-dot"></span>Agendado</td></tr>
+          <tr><td>19/09</td><td><span class="badge badge-jogo">Fighting</span></td><td><a href="sf6.html">Capcom Cup</a></td><td>Punk vs NuckleDu</td><td class="status-agendado"><span class="status-dot"></span>Agendado</td></tr>
+          <tr><td>20/09</td><td><span class="badge badge-jogo">Esportes/Corrida</span></td><td><a href="rocketleague.html">RLCS</a></td><td>Falcons vs Karmine Corp</td><td class="status-agendado"><span class="status-dot"></span>Agendado</td></tr>
+          <tr><td>09/09</td><td><span class="badge badge-jogo">FPS</span></td><td><a href="valorant.html">VCT Americas</a></td><td>100 Thieves 3-2 LOUD</td><td class="status-finalizado"><span class="status-dot"></span>Finalizado</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>
+
+<footer class="oe-footer py-5 mt-5">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-12 col-md-4">
+        <h6 class="mb-3">OmniEsports</h6>
+        <p class="mb-0">Jogos, notícias e campeonatos de e-sports em um só lugar.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="mb-3">Navegação</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="noticias.html">Notícias</a></li>
+          <li><a href="lancamentos.html">Lançamentos</a></li>
+          <li><a href="campeonatos.html">Campeonatos</a></li>
+          <li><a href="bootstrap.html">Bootstrap</a></li>
+          <li><a href="campeonatos.html#calendario">Calendário</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="mb-3">Redes sociais</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitch</a></li>
+          <li><a href="#">Discord</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4">
+    <p class="mb-0 small">&copy; 2026 OmniEsports. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,7 +1,10 @@
 # OmniEsports
 
-**Aluno:** _(preencher com seu nome)_
-**Ano:** 2026
+Gianlucca Lauton
+Samuel Borborema 
+Tiago Hiroshi Silva
+ 
+2026
 
 ## 📌 Descrição do projeto
 

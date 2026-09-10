@@ -1,8 +1,8 @@
 # OmniEsports
 
-Gianlucca Lauton
-Samuel Borborema 
-Tiago Hiroshi Silva
+Gianlucca Lauton <br>
+Samuel Borborema <br>
+Tiago Hiroshi 
  
 2026
 

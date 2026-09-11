@@ -32,50 +32,9 @@ Site sobre jogos / e-sports.
 | `bootstrap.html` | Página explicativa sobre o Bootstrap (obrigatória pelo desafio) |
 | `valorant.html`, `cs2.html`, `lol.html`, `dota2.html`, `freefire.html`, `fortnite.html`, `tekken.html`, `sf6.html`, `rocketleague.html` | Página individual de cada jogo, com partidas, resultados, classificação e notícias |
 
-## 📂 Estrutura de pastas
-
-```
-omniesports/
-│
-├── index.html
-├── noticias.html
-├── lancamentos.html
-├── campeonatos.html
-├── bootstrap.html
-├── valorant.html
-├── cs2.html
-├── lol.html
-├── dota2.html
-├── freefire.html
-├── fortnite.html
-├── tekken.html
-├── sf6.html
-├── rocketleague.html
-│
-├── css/
-│   └── style.css
-│
-├── img/
-│   ├── logo.svg
-│   ├── thumb-valorant.svg
-│   ├── thumb-cs2.svg
-│   ├── thumb-lol.svg
-│   ├── thumb-dota2.svg
-│   ├── thumb-freefire.svg
-│   ├── thumb-fortnite.svg
-│   ├── thumb-tekken.svg
-│   ├── thumb-sf6.svg
-│   ├── thumb-rocketleague.svg
-│   └── (demais imagens do projeto)
-│
-└── README.md
-```
-
-## 🔗 Links
-
-- **Repositório GitHub:** _(adicionar link após o upload)_
-- **Site publicado (Vercel):** _(adicionar link após o deploy)_
+- **Repositório GitHub:** https://github.com/gianlucca-slauton/projeto-esports-news
+- **Site publicado:** _(adicionar link após o deploy)_
 
 ## ✍️ Sobre o desenvolvimento
 
-O projeto utiliza o sistema de grid do Bootstrap (`container`, `row`, `col-*`) em todas as páginas, com componentes como Navbar, Dropdown, Card, Badge, Table e Buttons. A identidade visual (paleta escura + dourado + magenta) foi aplicada por cima do tema `data-bs-theme="dark"` do Bootstrap via variáveis CSS customizadas em `css/style.css`, e cada página de jogo recebe uma cor de destaque própria através do atributo `data-game` no `<body>`.
+O projeto utiliza o sistema de grid do Bootstrap (`container`, `row`, `col-*`) em todas as páginas, com componentes como Navbar, Dropdown, Card, Badge, Table e Buttons. A identidade visual foi aplicada por cima do tema `data-bs-theme="dark"` do Bootstrap via variáveis CSS customizadas em `css/style.css`, e cada página de jogo recebe uma cor de destaque própria através do atributo `data-game` no `<body>`.

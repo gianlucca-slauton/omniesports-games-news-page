@@ -22,9 +22,13 @@ Site sobre jogos / e-sports.
 - JavaScript (filtro de notícias e dropdown/navbar do Bootstrap)
 
 
-- **Repositório GitHub:** https://github.com/gianlucca-slauton/projeto-esports-news
-- **Site publicado:** https://omni-esports-games.vercel.app
-
-## ✍️ Sobre o desenvolvimento
+### ✍️ Sobre o desenvolvimento
 
 O projeto utiliza o sistema de grid do Bootstrap (`container`, `row`, `col-*`) em todas as páginas, com componentes como Navbar, Dropdown, Card, Badge, Table e Buttons. A identidade visual foi aplicada por cima do tema `data-bs-theme="dark"` do Bootstrap via variáveis CSS customizadas em `css/style.css`, e cada página de jogo recebe uma cor de destaque própria através do atributo `data-game` no `<body>`.
+
+<hr>
+
+### **Repositório GitHub:** https://github.com/gianlucca-slauton/projeto-esports-news
+### **Site publicado:** https://omni-esports-games.vercel.app
+
+

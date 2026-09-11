@@ -23,7 +23,7 @@ Site sobre jogos / e-sports.
 
 
 - **Repositório GitHub:** https://github.com/gianlucca-slauton/projeto-esports-news
-- **Site publicado:** _(adicionar link após o deploy)_
+- **Site publicado:** https://omni-esports-games.vercel.app
 
 ## ✍️ Sobre o desenvolvimento
 

@@ -21,16 +21,6 @@ Site sobre jogos / e-sports.
 - Bootstrap 5.3.8 (via CDN)
 - JavaScript (filtro de notícias e dropdown/navbar do Bootstrap)
 
-## 📄 Páginas do projeto
-
-| Página | Descrição |
-| --- | --- |
-| `index.html` | Página principal, com hero, últimas notícias e próximas partidas |
-| `noticias.html` | Notícias de todos os jogos, com filtro por categoria |
-| `lancamentos.html` | Lançamentos, jogos em pré-venda/beta e patch notes |
-| `campeonatos.html` | Hub de campeonatos por categoria (FPS, MOBA, Battle Royale, Fighting, Esportes/Corrida) e calendário |
-| `bootstrap.html` | Página explicativa sobre o Bootstrap (obrigatória pelo desafio) |
-| `valorant.html`, `cs2.html`, `lol.html`, `dota2.html`, `freefire.html`, `fortnite.html`, `tekken.html`, `sf6.html`, `rocketleague.html` | Página individual de cada jogo, com partidas, resultados, classificação e notícias |
 
 - **Repositório GitHub:** https://github.com/gianlucca-slauton/projeto-esports-news
 - **Site publicado:** _(adicionar link após o deploy)_
